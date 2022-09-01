@@ -18,10 +18,10 @@ describe 'solver class' do
 
   describe 'reverse' do
     it 'reverse string' do
-      expect(solver.reverse('hello')).to eq('olleh')
+      expect(solver.reverse_string('hello')).to eq('olleh')
     end
     it 'reverse error' do
-      expect { solver.reverse(123) }.to raise_error('just strings allowed')
+      expect { solver.reverse_string(123) }.to raise_error('Just strings allowed')
     end
   end
 end
