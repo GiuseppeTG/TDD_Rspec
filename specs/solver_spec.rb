@@ -24,4 +24,19 @@ describe 'solver class' do
       expect { solver.reverse_string(123) }.to raise_error('Just strings allowed')
     end
   end
+
+  describe 'fizz-buzz' do
+    it 'number is fizz' do
+      expect(solver.fizz_buzz(9)).to eq('fizz')
+    end
+    it 'number is buzz' do
+      expect(solver.fizz_buzz(25)).to eq('buzz')
+    end
+    it 'number is fizz-buzz' do
+      expect(solver.fizz_buzz(15)).to eq('fizzbuzz')
+    end
+    it 'number is not fizz, buzz, fizzbuzz' do
+      expect(solver.fizz_buzz(7)).to eq('7')
+    end
+  end
 end
